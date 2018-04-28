@@ -1,0 +1,95 @@
+.portfolio {
+	padding: 45px 0;
+	@include _media('md') {
+		padding: 90px 0;
+	}
+
+	background: url('../img/porfolio-bg-flow2.png') center no-repeat;
+		@include _media('lg') {
+			background: url('../img/porfolio-bg-flow2.png') 117px 205px no-repeat,
+						url('../img/porfolio-bg-phone.jpg') right center no-repeat;
+					
+		}
+
+	&__subtitle {
+		color: $color_text;
+		margin: 35px 0;
+	}
+
+	&__text {
+		color: $color_text;
+		margin-bottom: 32px;
+	}
+
+	&-advantages {
+		text-align: center;
+
+		@include _media('md') {
+			text-align: left;
+		}
+
+		&__item {
+
+			& h3 {
+				text-transform: uppercase;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.portfolio-gallery {
+	max-width: 1400px;
+	margin: 0 auto;
+
+	&__sizer {
+		width: 33.33%;
+	}
+
+	&__item {
+		position: relative;
+		width: 33.33%;
+		cursor: pointer;
+		font-size: 0;
+
+		&:hover .portfolio-gallery__item-overlay {
+			width: 100%;
+		}
+
+		& img {
+			display: block;
+		}
+
+		&-overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgb(119,119,119); /* Old browsers */
+		background: -webkit-linear-gradient(rgba(119,119,119,1) 0%, rgba(255,255,255,1) 100%);
+		background: -o-linear-gradient(rgba(119,119,119,1) 0%, rgba(255,255,255,1) 100%);
+		background: linear-gradient(rgba(119,119,119,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			height: 100%;
+			overflow: hidden;
+			width: 0;
+			transition: width .5s ease;
+			opacity: 0.9;
+		
+			& span {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 600;
+				position: absolute;
+				font-variant: small-caps;
+				left: 50%;
+				top: 50%;
+				font-size: 16px;
+				transform: translate(-50%, -50%);
+				// opacity: 1;
+			}
+		
+		}
+	}
+
+}
+

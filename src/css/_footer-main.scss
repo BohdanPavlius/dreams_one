@@ -1,0 +1,26 @@
+.footer-main {
+	background-color: #111;
+	text-align: center;
+	height: 80px;
+	display: flex;
+	align-items:center;
+	position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 1px;
+			width: 80%;
+			background-color: #fff;
+			left: 10%;
+			top: 0;
+		}
+
+	&__copy {
+		color: #fff;
+
+		& a:hover {
+			color: #fff;
+		}
+	}
+}
